@@ -2,7 +2,11 @@ import { View, Text, StyleSheet, Switch } from "react-native";
 import React, { useState } from "react";
 import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
 
-export default function UseCoins() {
+interface UseCoinsProps {
+  coins?: number;
+}
+
+export default function UseCoins({ coins }: UseCoinsProps) {
   const [isSwitchOn, setIsSwitchOn] = useState(false);
 
   const toggleSwitch = () => {
@@ -12,14 +16,14 @@ export default function UseCoins() {
   return (
     <View style={styles.container}>
       <View style={styles.switchContainer}>
+        <FontAwesome5 name="coins" size={24} color="orange" />
         <Text style={styles.text}>
-          <FontAwesome5 name="coins" size={24} color="orange" />
-          {"  "}Usar moedas?
+          {"  "}Usar moedas? {coins != null ? `(${coins})` : ""}
         </Text>
       </View>
       <Switch
         trackColor={{ false: "#767577", true: "#767577" }}
-        thumbColor={isSwitchOn ? "#f5dd4b" : "#f4f3f4"}
+        thumbColor={isSwitchOn ? "#f4f3f4" : "#f4f3f4"}
         onValueChange={toggleSwitch}
         value={isSwitchOn}
       />

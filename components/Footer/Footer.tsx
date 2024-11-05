@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <View style={styles.container}>
       <Cupom />
-      <UseCoins />
+      <UseCoins coins={60} />
       <View style={styles.footer}>
         <PayTotal total={100.5} />
         <ButtonCheckup title="FAZER PEDIDO" />
