@@ -11,7 +11,9 @@ export default function Footer() {
       <Cupom />
       <UseCoins coins={60} />
       <View style={styles.footer}>
-        <PayTotal total={100.5} />
+        <View style={styles.pagamento}>
+          <PayTotal total={100.5} />
+        </View>
         <ButtonCheckup title="FAZER PEDIDO" />
       </View>
     </View>
@@ -21,12 +23,20 @@ export default function Footer() {
 const styles = StyleSheet.create({
   container: {
     justifyContent: "flex-end",
+    borderTopWidth: 1,
+    borderColor: "#f0f0f0",
   },
   footer: {
     flexDirection: "row",
     justifyContent: "space-between",
-    alignItems: "center",
-    backgroundColor: "white",
+    alignItems: "flex-end",
     marginLeft: 5,
+    borderTopWidth: 1,
+    borderColor: "#f0f0f0",
   },
+
+  pagamento:{
+    justifyContent : "flex-end",
+    width: "48%",
+  }
 });

@@ -8,7 +8,7 @@ interface PayTotalProps {
 
 export default function PayTotal({ total }: PayTotalProps) {
   return (
-    <View>
+    <View style={styles.container}>
       <Text style={styles.text}>Pagamento Total</Text>
       <Text style={styles.textTotal}>R$ {total}</Text>
     </View>
@@ -20,9 +20,15 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "bold",
     color: DEFAULT_COLOR,
+    textAlign: "right",
   },
   text: {
     fontSize: 16,
     color: "gray",
+    textAlign: "right",
+
+  },
+  container: {
+    justifyContent: "flex-end"
   },
 });

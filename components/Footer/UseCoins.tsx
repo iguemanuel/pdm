@@ -18,7 +18,7 @@ export default function UseCoins({ coins }: UseCoinsProps) {
       <View style={styles.switchContainer}>
         <FontAwesome5 name="coins" size={24} color="orange" />
         <Text style={styles.text}>
-          {"  "}Usar moedas? {coins != null ? `(${coins})` : ""}
+          {"  "}Moedas para aplicar {coins != null ? `(${coins})` : ""}
         </Text>
       </View>
       <Switch
@@ -40,6 +40,8 @@ const styles = StyleSheet.create({
     padding: 10,
     paddingLeft: 0,
     marginLeft: 5,
+    borderTopWidth: 1,
+    borderColor: "#f0f0f0",
   },
   switchContainer: {
     flexDirection: "row",

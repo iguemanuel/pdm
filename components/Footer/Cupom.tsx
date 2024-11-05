@@ -1,21 +1,23 @@
-import { View, Text, TextInput, StyleSheet } from "react-native";
+import { View, Text, TextInput, StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
+import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 
 export default function Cupom() {
   return (
     <View style={styles.container}>
+      <Text style={styles.text}>
       <MaterialCommunityIcons
         name="ticket-percent-outline"
         size={24}
         color="red"
-      />
-      <Text style={styles.text}>Cupom de Desconto:</Text>
-      <TextInput
-        style={styles.input}
-        placeholder="Digite seu cupom"
-        placeholderTextColor="gray"
-      />
+      />  Insira o cupom
+      </Text>
+      <TouchableOpacity>
+        <Text style={styles.text}>Cupom de Desconto
+        <FontAwesome6 name="chevron-right" size={14} color="gray" />
+        </Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -40,5 +42,6 @@ const styles = StyleSheet.create({
     paddingLeft: 0,
     paddingRight: 0,
     marginLeft: 5,
+    marginRight: 5,
   },
 });
