@@ -1,6 +1,6 @@
 const games = [
   {
-    category: "rpg",
+    category: "Rpg",
     data: [
       {
         title: "horizon zero dawn",
@@ -25,7 +25,7 @@ const games = [
     ],
   },
   {
-    category: "racing",
+    category: "Racing",
     data: [
       {
         title: "forza horizon 4",
@@ -50,7 +50,7 @@ const games = [
     ],
   },
   {
-    category: "fps",
+    category: "Fps",
     data: [
       {
         title: "counter strike: go",
@@ -71,6 +71,37 @@ const games = [
         title: "medal of honor",
         platform: "ps one",
         metacritic: 92,
+      },
+    ],
+  },
+  {
+    category: "Sports",
+    data: [
+      {
+        title: "Fifa 24",
+        platform: "ps4",
+        metacritic: 70,
+      },
+      {
+        title: "nba 2k23",
+        platform: "xbox one",
+        metacritic: 90,
+      },
+    ],
+  },
+
+  {
+    category: "Adventure",
+    data: [
+      {
+        title: "Minecraft",
+        platform: "pc",
+        metacritic: 100,
+      },
+      {
+        title: "Red dead redemption 2",
+        platform: "ps4, xbox one, pc    ",
+        metacritic: 97,
       },
     ],
   },

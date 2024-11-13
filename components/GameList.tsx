@@ -16,8 +16,7 @@ const getMetacriticColor = (metacritic: number) => {
 export default function GameList() {
   return (
     <SectionList
-      sections={MOCK_GAMES} // usa a lista de jogos com categorias
-      keyExtractor={(item, index) => item.title + index}
+      sections={MOCK_GAMES} // Usa a lista
       renderItem={({ item }) => (
         <View style={styles.itemContainer}>
           <Text style={styles.title}>Game: {item.title}</Text>
